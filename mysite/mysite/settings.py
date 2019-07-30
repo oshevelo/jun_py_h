@@ -26,7 +26,7 @@ SECRET_KEY = 'fkv#$_=nzyo_4*t)lt*szhk^w8vj9+w5nzadky*eubm1q^g59m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
