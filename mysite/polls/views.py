@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Question
 from .serializers import QuestionSerializer
 
+from rest_framework.pagination import LimitOffsetPagination
 from django.http import HttpResponse
 from django.template import loader
 from django.http import Http404
@@ -23,6 +24,7 @@ def index(request):
 class QuestionList(generics.ListCreateAPIView):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
+    #pagination_class = LimitOffsetPagination
 
 
 class QuestionDetail(generics.RetrieveUpdateDestroyAPIView):
