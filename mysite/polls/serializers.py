@@ -1,6 +1,12 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from polls.models import Question
+from polls.models import Question, ExtQuestion
+
+
+class ExtQuestionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ExtQuestion
+        fields = ('external_id', 'raw_data', 'received_date')
 
 
 class UserSerializer(serializers.ModelSerializer):
