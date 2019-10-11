@@ -10,6 +10,7 @@ class Car(models.Model):
     year_of_prod = models.IntegerField()
     base_usd_price = models.IntegerField()
 
+    
     def __str__(self):
         return self.make + " " + self.model + ", " + str(self.year_of_prod)
 
