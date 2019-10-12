@@ -22,7 +22,9 @@ class Feature(models.Model):
           null = True,
           blank = True,
           )
-    feature_name = models.CharField(max_length=30)
+    feature_name = models.CharField(max_length=30)#FIXME: rename into value
+    #TODO: add choise by type https://docs.djangoproject.com/en/2.2/ref/models/fields/#django.db.models.Field.choices
+    #TODO: add extra properties field https://docs.djangoproject.com/en/2.2/ref/contrib/postgres/fields/#jsonfield
     feature_usd_price = models.IntegerField()
 
     def __str__(self):
