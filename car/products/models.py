@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 class Car(models.Model):
     """Car being chosen by customer"""
     make = models.CharField(max_length=30)
@@ -29,4 +27,3 @@ class Feature(models.Model):
 
     def __str__(self):
         return self.feature_name
-        
