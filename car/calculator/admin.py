@@ -1,3 +1,6 @@
 from django.contrib import admin
+from calculator.models import CurrencyChoice
+import requests
 
-# Register your models here.
+
+admin.site.register(CurrencyChoice)
